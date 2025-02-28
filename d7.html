@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Surprise</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Times New Roman', serif;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            width: 50%;
+            border: 1px solid #b30000;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        #button {
+            background-color: #FFA500;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #button:hover {
+            background-color: #ff8c00;
+        }
+
+        #name {
+            display: none;
+            font-size: 40px;
+            font-family: 'Brush Script MT', cursive;
+            color: #ff007f;
+            font-weight: bold;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .glow {
+            text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff007f;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SCIENTISTS RECENTLY DISCOVERED SOMETHING MORE PRECIOUS THAN A DIAMOND!</h1>
+    <hr>
+
+    <img src="OIP.jpeg" alt="Scientific Discovery">
+
+    <p>Click the button to find out!</p>
+    <button id="button" onclick="showName()">Click to Reveal</button>
+
+    <p id="name" class="glow">Lalitha ❤️</p>
+
+    <script>
+        function showName() {
+            let nameElement = document.getElementById("name");
+            nameElement.style.display = "block";
+            setTimeout(() => {
+                nameElement.style.opacity = "1";
+            }, 100);
+        }
+    </script>
+
+</body>
+</html>
